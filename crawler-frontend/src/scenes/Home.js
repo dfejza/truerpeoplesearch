@@ -34,11 +34,6 @@ const styles = theme => ({
 
 // Point API requests to the right direction by modifying axios config
 const instance = axios.create({
-    baseURL: 'http://127.0.0.1:3001',
-    proxy: {
-        host: '127.0.0.1',
-        port: 3001,
-    },
     headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
@@ -95,6 +90,9 @@ class Home extends Component {
                     Reverse Phone Search
                 </Typography>
                 <PhoneSearchBar lookupNumber={this.lookupNumber} response={this.state.status}/>
+                <Typography type="subheading" align="left" className={classes.searchHeadline}>
+                    *Display purpose only. All requests will be blocked, requiring a captcha on the backed (AWS)
+                </Typography>
                 {this.state.status > -2 &&
                     <LookupResult details={this.state.result}/>
                 }
