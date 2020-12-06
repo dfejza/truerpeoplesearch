@@ -1,3 +1,5 @@
+# This project was written within a weekend for a job application. You should most likely not reference this code.
+
 # TruePeopleSearch Scraper
 Web scraper for the site http://truepeoplesearch.com
 User can search a telephone number, and the resultant address will be displayed. If multiple names found, the user must specify the name.
